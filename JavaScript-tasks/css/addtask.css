@@ -1,0 +1,36 @@
+.task {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-size: 25px;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Segoe UI", sans-serif;
+    margin-top: 75px;
+
+}
+
+.class2 {
+    margin-left: 50px;
+}
+
+.addButton{
+    color: white;
+    background-color:rgb(47,128,237);
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+}
+
+.inputclass{
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+}
