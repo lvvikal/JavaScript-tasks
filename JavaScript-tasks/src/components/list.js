@@ -1,34 +1,28 @@
+import { StatusLabel } from './const.js';
 import {createElement} from '../render.js';
+import { AbstractComponent } from './AbstractComponent.js';
 
 
-function createList() {
+function createList(status) {
     return (
         `<div class="obl">
-        <div id="list" class="class3">
-        <div class="title1">Тема</div>
-        </div>
+            <div id="list" class="class3">
+                <div class="class1 list${status}">${StatusLabel[status]}</div>
+            </div>
         </div>`
       );
 }
 
 
-export class List {
-  getTemplate() {
-    return createList();
-  }
+export class List  extends AbstractComponent{
+  #status = null;
 
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
+    constructor({status}){
+        super();
+        this.#status = status;
     }
-
-
-    return this.element;
-  }
-
-
-  removeElement() {
-    this.element = null;
-  }
+      
+    getTemplate() {
+        return createList(this.#status);
+    }
 }

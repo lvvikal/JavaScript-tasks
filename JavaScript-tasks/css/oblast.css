@@ -7,10 +7,10 @@
 .class3{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    
 }
 
-.title1{
+.listbacklog{
     background-color: rgb(227,227,227);
     font-size: 20px;
     padding: 15px 30px;
@@ -21,7 +21,7 @@
     margin-bottom: 20px;
 }
 
-.title2{
+.listinProcess{
     background-color: rgb(214,231,255);
     font-size: 20px;
     padding: 15px 30px;
@@ -29,9 +29,10 @@
     color: rgb(27,131,238);  
     font-family: "Segoe UI", sans-serif; 
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.title3{
+.listdone{
     background-color: rgb(215,249,224);
     font-size: 20px;
     padding: 15px 30px;
@@ -39,9 +40,10 @@
     color: rgb(104,188,128);  
     font-family: "Segoe UI", sans-serif; 
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.title4{
+.listbin{
     background-color: rgb(250,228,228);
     font-size: 20px;
     padding: 15px 30px;
@@ -49,6 +51,7 @@
     color: rgb(205,117,127);  
     font-family: "Segoe UI", sans-serif;
     font-weight: 600; 
+    margin-bottom: 20px;
 }
 
 .obl{

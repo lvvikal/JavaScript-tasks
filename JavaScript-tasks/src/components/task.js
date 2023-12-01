@@ -1,30 +1,27 @@
-import {createElement} from '../render.js';
+import { createElement } from "../render.js";
+import { AbstractComponent } from "./AbstractComponent.js";
 
 
-function createTask() {
+function createTask(status, title) {
     return (
-        `<div class="title5 task1">Выучить JS</div>`
+        `<div class="title5 task${status}">${title}</div>`
       );
 }
 
+export class Task extends AbstractComponent{
+  #id = null;
+  #status = null;
+  #title = null;
 
-export class Task {
-  getTemplate() {
-    return createTask();
-  }
-
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
+    constructor({id, title, status}){
+        super();
+        this.#id = id;
+        this.#status = status;
+        this.#title = title;
     }
+      
 
-
-    return this.element;
-  }
-
-
-  removeElement() {
-    this.element = null;
-  }
+    getTemplate() {
+        return createTask(this.#status, this.#title);
+    }
 }
